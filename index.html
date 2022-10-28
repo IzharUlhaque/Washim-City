@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Washim City</title>
+    <!-- loader animation -->
+    <link rel="stylesheet" href="./assets/css/loader.css">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!-- style -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+  </head>
+  <body onload="myFunction()">
+    <!-- spalash screen loader -->
+    <div id="loader"></div>
+    <!-- main visible nody -->
+    <div style="display:none;" id="main" class="animate-bottom">
+      <nav class="navbar bg-danger sticky-top">
+        <div class="container">
+          <a href="#menu" class="navbar-brand fw-semibold text-light" data-bs-toggle="offcanvas" role="button" aria-controls="menu">
+            <i class="bi bi-grid"></i>
+            Washim City
+          </a>
+          <ul class="list-group list-group-horizontal">
+            <li class="list-group-item bg-danger border-light">
+              <a href="" class="text-light">
+                <i class="bi bi-bell"></i>
+              </a>
+            </li>
+            <li class="list-group-item bg-danger border-light">
+              <a href="" class="text-light">
+                <i class="bi bi-question-circle"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- alert box -->
+      <div class="container p-2 pb-0 d-none" id="alertBox">
+      <div class="alert m-0 alert-warning alert-dismissible fade show p-3" role="alert">
+        <strong>Holy guacamole!</strong> You should check in on some of those fields below. <br><br>
+        <div class="d-flex justify-content-end">
+          <button type="button" class="btn btn-sm me-2 btn-outline-danger" data-bs-dismiss="alert" style="font-size: 12px" aria-label="Close">Later</button>
+          <a href="" class="btn btn-primary btn-sm" style="font-size: 12px">Read More</a>
+        </div>
+      </div>
+      </div>
+
+      <!-- top carasoul -->
+      <div class="container p-2 rounded">
+        <div id="topCarousel" class="carousel slide" data-bs-ride="true">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#topCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#topCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#topCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./assets/img/banner1.jpg" class="d-block w-100 rounded" >
+            </div>
+            <div class="carousel-item">
+              <img src="./assets/img/banner2.jpg" class="d-block w-100 rounded">
+            </div>
+            <div class="carousel-item">
+              <img src="./assets/img/banner3.jpg" class="d-block w-100 rounded" >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- important locations -->
+      <div class="container p-2">
+        <div class="card border-0 shadow-sm">
+        <div class="p-2">
+          <h2 class="fs-6 fw-semibold p-2">Important Location</h2>
+          <div class="container">
+            <div class="row">
+              <div class="col-3 text-center">
+                <div class="icon-box text-light d-inline-block">
+                  <i class="bi bi-building"></i>
+                </div>
+                <p class="small-text p-0">Government <br>Offices</p>
+              </div>
+              <div class="col-3 text-center">
+                <a href="./assets/hospitals/hospitals.html">
+                  <div class="icon-box text-light d-inline-block">
+                    <i class="bi bi-heart-pulse"></i>
+                  </div>
+                </a>
+                <p class="small-text p-0">Hospitals & <br> Medicals</p>
+              </div>
+              <div class="col-3 text-center">
+                <div class="icon-box text-light d-inline-block">
+                  <i class="bi bi-people"></i>
+                </div>
+                <p class="small-text p-0">Personal <br> Services</p>
+              </div>
+              <div class="col-3 text-center">
+                <div class="icon-box text-light d-inline-block">
+                  <i class="bi bi-mortarboard"></i>
+                </div>
+                <p class="small-text p-0">Schools & <br>Colleges</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="" class="text-decoration-none fw-semibold text-dark">
+          <div class="card-footer d-flex justify-content-between">
+            <small class="text-muted">Help us add missing places</small>
+            <div>
+              <i class="bi bi-chevron-double-right"></i>
+            </div>
+          </div>
+        </a>
+        </div>
+      </div>
+
+      
+      <!-- categories -->
+      <div class="container p-2">
+        <div class="card border-0 shadow-sm">
+        <div class="p-2">
+          <h2 class="fs-6 fw-semibold p-2">Business Directory</h2>
+          <div class="container">
+            <div class="row">
+              <div class="col-3 text-center">
+                <div class="icon-box text-light d-inline-block">
+                  <i class="bi bi-shop"></i>
+                </div>
+                <p class="small-text p-0">General <br>Stores</p>
+              </div>
+              <div class="col-3 text-center">
+                <div class="icon-box text-light d-inline-block">
+                  <i class="bi bi-book"></i>
+                </div>
+                <p class="small-text p-0">Book <br>Sellers</p>
+              </div>
+              <div class="col-3 text-center">
+                <div class="icon-box text-light d-inline-block">
+                  <i class="bi bi-lightbulb"></i>
+                </div>
+                <p class="small-text p-0">Electronics</p>
+              </div>
+              <div class="col-3 text-center">
+                <div class="icon-box text-light d-inline-block">
+                  <i class="bi bi-bicycle"></i>
+                </div>
+                <p class="small-text p-0">Bicycles <br>Stores</p>
+              </div>
+              <div class="col-3 text-center">
+                <div class="icon-box text-light d-inline-block">
+                  <i class="bi bi-car-front"></i>
+                </div>
+                <p class="small-text p-0">Automobiles</p>
+              </div>
+              <div class="col-3 text-center">
+                <div class="icon-box text-light d-inline-block">
+                  <i class="bi bi-bag"></i>
+                </div>
+                <p class="small-text p-0">Daily <br>Needs</p>
+              </div>
+              <div class="col-3 text-center">
+                <div class="icon-box text-light d-inline-block">
+                  <i class="bi bi-hammer"></i>
+                </div>
+                <p class="small-text p-0">Hardware <br> Stores</p>
+              </div>
+              <div class="col-3 text-center">
+                <div class="icon-box text-light d-inline-block">
+                  <i class="bi bi-truck"></i>
+                </div>
+                <p class="small-text p-0">Transports</p>
+              </div>
+              <div class="col-3 text-center">
+                <div class="icon-box text-light d-inline-block">
+                  <i class="bi bi-laptop"></i>
+                </div>
+                <p class="small-text p-0">Computers <br>&amp; Laptops</p>
+              </div>
+              <div class="col-3 text-center">
+                <div class="icon-box text-light d-inline-block">
+                  <i class="bi bi-camera"></i>
+                </div>
+                <p class="small-text p-0">Art &amp; Studios</p>
+              </div>
+              <div class="col-3 text-center">
+                <div class="icon-box text-light d-inline-block">
+                  <i class="bi bi-bank"></i>
+                </div>
+                <p class="small-text p-0">Banks &amp; <br> Finance </p>
+              </div>
+              <div class="col-3 text-center">
+                <div class="icon-box text-light d-inline-block">
+                  <i class="bi bi-person-video3"></i>
+                </div>
+                <p class="small-text p-0">Coaching <br>Centers</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+
+
+
+      <!-- service centers -->
+      <div class="container p-2">
+        <div class="card border-0 shadow-sm">
+        <div class="p-2">
+          <h2 class="fs-6 fw-semibold p-2">Repairing &amp; Services</h2>
+          <div class="container">
+            <div class="row">
+              <div class="col-3 text-center">
+                <div class="icon-box text-light d-inline-block">
+                  <i class="bi bi-building"></i>
+                </div>
+                <p class="small-text p-0">Government <br>Offices</p>
+              </div>
+              <div class="col-3 text-center">
+                <div class="icon-box text-light d-inline-block">
+                  <i class="bi bi-heart-pulse"></i>
+                </div>
+                <p class="small-text p-0">Hospitals & <br> Medicals</p>
+              </div>
+              <div class="col-3 text-center">
+                <div class="icon-box text-light d-inline-block">
+                  <i class="bi bi-people"></i>
+                </div>
+                <p class="small-text p-0">Personal <br> Services</p>
+              </div>
+              <div class="col-3 text-center">
+                <div class="icon-box text-light d-inline-block">
+                  <i class="bi bi-mortarboard"></i>
+                </div>
+                <p class="small-text p-0">Schools & <br>Colleges</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="" class="text-decoration-none fw-semibold text-dark">
+          <div class="card-footer d-flex justify-content-between">
+            <small class="text-muted">Help us add missing places</small>
+            <div>
+              <i class="bi bi-chevron-double-right"></i>
+            </div>
+          </div>
+        </a>
+        </div>
+      </div>
+
+
+
+    <!--last div for animation -->
+    </div>
+
+
+
+
+<!-- ========================================================= -->
+    <!-- sidemenu -->
+    <div class="offcanvas offcanvas-start bg-danger" tabindex="-1" id="menu" aria-labelledby="menu">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title text-light fw-semibold" id="menu">Menus</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div>
+          Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+        </div>
+        <div class="dropdown mt-3">
+          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+            Dropdown button
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- sidemenu-ended -->
+
+
+
+
+    <!-- jquery -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- loader js -->
+    <script src="./assets/js/loader.js"></script>
+    <!-- bootstrap bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <!-- script js -->
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
